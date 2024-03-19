@@ -6,7 +6,7 @@ func isMirrorableString(word:String) -> Bool{
     for each in word{
         reversedWord = String(each) + reversedWord
     }
-    return word == reversedWord ? true:false
+    return word == reversedWord
 }
 
 print(isMirrorableString(word: "მადამ"))

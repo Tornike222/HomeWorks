@@ -1,9 +1,9 @@
 import Foundation
 
 print("\n1. დაწერეთ ფუნქცია რომელიც პარამეტრად მიიღებს String-ს და დააბრუნებს ბულიანს. ფუნქციამ უნდა შეამოწმოს მიღებული სტრინგი სარკისებურია თუ არა (სიტყვა ან წინადადება რომელიც იკითხება ერთნაირად როგორც თავიდან, ისე ბოლოდან მაგ: “ანა”, “აირევი ივერია”, “მადამ”)")
-func isMirrorableString(word:String) -> Bool{
+func isMirrorableString(word: String) -> Bool{
     var reversedWord = ""
-    for each in word{
+    for each in word {
         reversedWord = String(each) + reversedWord
     }
     return word == reversedWord
@@ -12,9 +12,9 @@ func isMirrorableString(word:String) -> Bool{
 print(isMirrorableString(word: "მადამ"))
 
 print("\n2. დაწერეთ ფუნქცია რომელიც გადაცემულ რიცხვების array-ს ააკვარდატებს, დაპრინტავს და დააბრუნებს მნიშვნელობას.")
-func makeItDouble(array:[Int]) -> [Int]{
+func makeItDouble(array: [Int]) -> [Int] {
     var doubledArray = [Int]()
-    for each in array{
+    for each in array {
         doubledArray += [each * each]
         print(doubledArray)
     }
@@ -38,14 +38,14 @@ print ("\n4. დაწერეთ ფუნქცია, რომელიც 
 
 let sumOfIntArray = { (array:[Int]) in
     var sumOfElements = 0
-    for each in array{
+    for each in array {
         sumOfElements += each
     }
     print("ელემენტების ჯამია:",sumOfElements)
 }
 
-func arithmeticOperatiosForIntArrays(array:[Int], closure: @escaping ([Int]) -> () ) {
-    DispatchQueue.main.asyncAfter(deadline: .now()+5){
+func arithmeticOperatiosForIntArrays(array: [Int], closure: @escaping ([Int]) -> ()) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 5){
         sumOfIntArray(array)
         print("მეოთხე დავალების შედეგი დაიბეჭდა 5 წამის შემდეგ")
     }
@@ -76,7 +76,7 @@ print(contactDictionary["გივი"] ?? "არ მოიძებნა მ�
 
 
 print("\n6. დაწერეთ ფუნქცია რომელიც პარამეტრად იღებს [String: Int] ტიპის Dictionary-ს და დააბრუნებს ანბანურად დალაგებულ dictionary-ს key ელემენტების მასივს.")
-func sortedDictionaryKeys(dict:[String:Int]) -> [String]{
+func sortedDictionaryKeys(dict: [String : Int]) -> [String] {
     return dict.keys.sorted()
 }
 

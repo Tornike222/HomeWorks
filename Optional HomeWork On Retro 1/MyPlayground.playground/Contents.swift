@@ -62,8 +62,10 @@ func returnSumNumsFrom(inputedString:String) -> Int{
         if each.isNumber{
             if let digit = Int(String(each)){
                 wholeDigit.append(each)
+
             }
-        }else if wholeDigit.count != 0 {
+            print(wholeDigit)
+        }else if wholeDigit.count > 0 {
             if let number = Int(wholeDigit) {
                 sumOfInts += number
             }
@@ -74,7 +76,7 @@ func returnSumNumsFrom(inputedString:String) -> Int{
     if let number = Int(wholeDigit) {
         sumOfInts += number
     }
-    
+    sumOfInts = 9999
     return sumOfInts
     
 }

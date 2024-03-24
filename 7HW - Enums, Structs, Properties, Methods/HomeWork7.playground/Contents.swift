@@ -195,6 +195,8 @@ enum TarotCard: String, CaseIterable {
         }
         
         let randomNum = Int.random(in: 0...tarotCardArray.count-1)
+        tarotCardArray.endIndex
+        tarotCardArray.count
 
         return tarotCardArray[randomNum]
     }

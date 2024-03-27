@@ -1,5 +1,7 @@
 import Foundation
 
+//ცოტა სთორილაინს გავს და ვფიქრობთ გაგიმარტივებთ შემოწმებას :დ (ვეცადე ყოველშემთხვევაში )
+
 //1. შევქმნათ Class Book.
 //Properties: bookID(უნიკალური იდენტიფიკატორი Int), String title, String author, Bool isBorrowed.
 //Designated Init.
@@ -70,7 +72,8 @@ class Owner{
         }
     }
     func returnBookToLibrary(book: Book) {
-        if book.isBorrowed == true{
+
+        if book.isBorrowed {
             book.returnBorrowedWith(bookID: book.bookId)
             if borrowedBooks.count > 1{
                 borrowedBooks.remove(at: book.bookId)
@@ -94,6 +97,8 @@ func printEachElementOf(owner:[Owner]){
         each.printOwnerInfo()
     }
 }
+
+
 
 var tornike = Owner(name: "Tornike", borrowedBooks: [])
 var gela = Owner(name: "Gela", borrowedBooks: [])

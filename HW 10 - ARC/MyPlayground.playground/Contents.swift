@@ -71,17 +71,17 @@ pasanauri = nil
 anaReservedTable = nil //თითოეულ კლასს მოაკლდა თითო-თითო რეფერსი, თუმცა ახლა თითოეული კლასი იძახებს მეორე კლასის ობიექტს, შესაბამისად მოხდა რითეინ საიქლი და არ მოხდა დეინიციალიზაცია
 
 //თუ ჩვენ კლასები სტრონგ რეფერენსებით გვექნება დაკავშირებული არ მოხდება დეალოკაცია, შესაბამისად შევქმნათ იგივე კლასები და ობიექტები, უბრალოდ ახლა კლასების პროფერთი იყოს Weak ებით აღწერილ
-protocol Description{
+protocol Description {
     var size: Int { get }
 }
-extension Int{
+extension Int {
     var m2: Int { return self * 100 } // რესტორნის საიზისთვის
     var cm2: Int { return self } // მაგიდის საიზისთვის
 
 }
 
 
-class CopyTable {
+class CopyTable: Description {
     let size = 100.cm2
     let tableId: Int
     weak var restaurant: CopyRestaurant?
@@ -116,7 +116,7 @@ class CopyTable {
     
 }
 
-class CopyRestaurant {
+class CopyRestaurant: Description {
     let size = 100.m2
     let name: String
     var table: CopyTable?

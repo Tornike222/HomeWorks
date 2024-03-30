@@ -132,7 +132,7 @@ class CopyRestaurant: Description {
     }
     
     func makeSome(action: () -> ()) {
-        
+        action()
     }
 }
 

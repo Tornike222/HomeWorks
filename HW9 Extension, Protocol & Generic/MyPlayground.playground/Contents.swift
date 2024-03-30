@@ -12,7 +12,7 @@ protocol SuperBeing {
     var speed: Int { get }
     var weakness: String { get }
     var gender: Gender { get }
-        
+
 }
 //3. SuperBeing-ის strength-სა და speed-ს მიეცით default მნიშვნელობა
 extension SuperBeing {
@@ -32,17 +32,15 @@ class Superhero: SuperBeing {
     var outfitColor: String
     var equipment: String
     var vehicle: String
-    var speed: Int
-    
-    init(name: String, weakness: String, gender: Gender, outfitColor: String, equipment: String, vehicle: String, speed: Int) {
+
+    init(name: String, weakness: String, gender: Gender, outfitColor: String, equipment: String, vehicle: String) {
         self.name = name
         self.weakness = weakness
         self.gender = gender
         self.outfitColor = outfitColor
         self.equipment = equipment
         self.vehicle = vehicle
-        self.speed = speed
-        
+
     }
     //6. გაუწერეთ Superhero კლასს მეთოდი - rescue, რომელიც პარამეტრად მიიღებს დაზარალებულის სახელს და დაბეჭდავს -
     //“‘სუპერგმირის სახელი’ არ შეუშინდა სახიფათო სიტუაციას და ‘დაზარალებულის სახელი’ გადაარჩინა სიკვდილს” (მაგ: “ბეტმენი” არ შეუშინდა სახიფათო სიტუაციას და “გელა” გადაარჩინა სიკვდილს).
@@ -67,7 +65,7 @@ class SuperVillain: SuperBeing{
     var evilScheme: String
     var obsession: String
     var rivalry: String
-    
+
     init(name: String, weakness: String, gender: Gender, evilScheme: String, obsession: String, rivalry: String) {
         self.name = name
         self.weakness = weakness
@@ -76,7 +74,7 @@ class SuperVillain: SuperBeing{
         self.obsession = obsession
         self.rivalry = rivalry
     }
-    
+
     //9. გაუწერეთ SuperVillain კლასს მეთოდი - attack - რომელიც პარამეტრად მიიღებს Superhero-ს და დაბეჭდავს -
     //“ბოროტმ. სახელი” გეგმავს თავდასხმას და მთელი ქალაქის მიწასთან გასწორებას, საეჭვოა “სუპერგმირის სახელი” მის შეჩერებას თუ შეძლებს” (მაგ: “ჯოკერი” გეგმავს თავდასხმას და მთელი ქალაქის მიწასთან გასწორებას, საეჭვოა “ბეტმენი” მის შეჩერებას თუ შეძლებს)
     func attack(hero: Superhero){
@@ -141,4 +139,3 @@ func compareSwiftness<T: SuperBeing>(firstHero: T, secondHero: T) -> String {
 }
 
 print(compareSwiftness(firstHero: soxumskiMaxo, secondHero: thor))
-

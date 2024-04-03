@@ -3,7 +3,6 @@ import Foundation
 
 //შექმენით ციკლური რეფერენცები და გაწყვიტეთ
 //აუცილებელია ქლოჟერების გამოყენება
-//აუცილებელია value და რეფერენს ტიების გამოყენება (კლასები, სტრუქტურები, ენამები და პროტოკოლები)
 //აუცილებელია გამოიყენოთ strong, weak & unowned რეფერენსები ერთხელ მაინც
 //დაიჭირეთ self ქლოჟერებში
 //გატესტეთ მიღებული შედეგები ინსტანსების შექმნით და დაპრინტვით
@@ -197,6 +196,8 @@ gelaGnolidzeReservedTableCopy?.printWaitressNameWithUnowned()
 
 gelaGnolidzeReservedTableCopy = nil
 taghlauraCopy = nil // მოხდა დეინიციალიზაცია
+
+
 
 
 
